@@ -2,6 +2,20 @@ from solver.state import State
 from solver.node import Node
 
 def bfs(initial_state: State):
+    """
+    Performs breadth first search, returning the final node if a path
+    is found, otherwise returns None
+
+    Paramters
+    ---------
+    initial_state: State
+        Initial configuration of the problem.
+
+    Returns
+    -------
+    Node:
+        Final node or None.
+    """
 
     open_l = [Node(initial_state, None)]
     closed_l = []
