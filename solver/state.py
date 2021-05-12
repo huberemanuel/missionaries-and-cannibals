@@ -22,5 +22,3 @@ class State:
         else:
             return True
     
-    # def __hash__(self):
-        # return self.state

@@ -2,10 +2,11 @@ from solver.state import State
 
 class Node:
 
-    def __init__(self, state, parent, left=True):
+    def __init__(self, state, parent, left=True, depth=-1):
         self.state = state
         self.parent = parent
         self.left = left
+        self.depth = depth
 
     def print_solution(self):
         path = []
