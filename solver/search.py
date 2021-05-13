@@ -1,6 +1,27 @@
 from solver.state import State
 from solver.node import Node
 
+
+def idfs(initial_state: State):
+    """
+    Performs iterative deepening search.
+
+    Parameters
+    ----------
+    initial_state: State
+        Initial problem configuration.
+    Returns: Node
+        Final Node from search or None if no path is found.
+    """
+    final_node = None
+    
+    for i in range(1, 10000):
+        final_node = dfs(initial_state, i)
+        if final_node != None:
+            break
+
+    return final_node
+
 def dfs(initial_state: State, max_depth: int=-1):
     """
     Performs depth first search, if max_depth is defined,
@@ -34,7 +55,6 @@ def dfs(initial_state: State, max_depth: int=-1):
             return actual_node
 
         possible_movs = actual_node.possible_movs()
-        print("Cheguei", possible_movs)
         for mov in possible_movs:
             if not mov in visiteds:
                 depth = actual_node.depth + 1 if max_depth > -1 else -1
