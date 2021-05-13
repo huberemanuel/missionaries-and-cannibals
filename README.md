@@ -16,10 +16,28 @@ Definição do problema:
 
 * Python 3.6
 
-Baixe o repositório atual e execute o comando:
+Baixe o repositório atual e execute o seguinte comando dentro da pasta do repositório para instalar o pacote python:
 
 ```bash
-make solve
+make install
+```
+
+Para executar a busca em largure, execute:
+
+```bash
+make solve-bfs
+```
+
+Para executar a busca em profundidade limitada, execute:
+
+```bash
+make solve-dfs max_depth=11
+```
+
+Para executar a busca por aprofundamento iterativo, execute:
+
+```bash
+make solve-idfs
 ```
 
 O programa irá mostrar a sequência de passos necessárias para resolver o problema.

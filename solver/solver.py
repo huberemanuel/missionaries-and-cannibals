@@ -1,3 +1,5 @@
+import argparse
+
 from solver.state import State
 from solver.search import bfs, dfs, idfs
 
@@ -35,10 +37,14 @@ def search(initial_state: State, method: str="bfs", max_depth: int=-1):
         print("No solution was found :(")
 
 def main():
+    parser = argparse.ArgumentParser("Resolução do problema dos missionários e canibais")
+    parser.add_argument("method", type=str, help="Método de busca a ser utilizado, opções disponíveis (dfs,idfs,bfs")
+    parser.add_argument("--max_depth", type=int, default=-1, help="Profundidade máxima para dfs")
+    args = parser.parse_args()
     initial_state = State(3, 3, 0, 0)
 
     print("Initial state: ", initial_state)
-    search(initial_state, "idfs", 11)
+    search(initial_state, args.method, args.max_depth)
 
 if __name__ == "__main__":
     main()
