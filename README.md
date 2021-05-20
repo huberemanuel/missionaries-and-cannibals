@@ -12,6 +12,13 @@ Definição do problema:
 
 2. b. Implemente e resolva o problema de forma ótima, utilizando um algoritmo de busca apropriado. É uma boa ideia verificar a existência de estados repetidos?
 
+Os estados já visitados devem ser evitados, caso contrário a busca pode demorar mais, ou pode ficar presa em loops infinitos caso a busca em profundidade seja utilizada.
+
+3. c. Por que você imagina que as pessoas têm dificuldades para resolver esse quebra-cabeça, considerando que o espaço de estados é tão simples?
+
+Como cada nó pode ser expandido até 5 vezes, fica difícil manter todos os estados memória, porém se o jogador compreender que deve primeiro mover os canibais e depois ir movendo em conjunto os missionários, fica fácil de decifrar o problema, mesmo que não tenha calculado/memorizado todos os estados possíveis.
+
+
 ## Requerimentos
 
 * Python 3.6
@@ -41,10 +48,3 @@ make solve-idfs
 ```
 
 O programa irá mostrar a sequência de passos necessárias para resolver o problema.
-
-Os estados já visitados devem ser evitados, caso contrário a busca pode demorar mais, ou pode ficar presa em loops infinitos caso a busca em profundidade seja utilizada.
-
-
-3. c. Por que você imagina que as pessoas têm dificuldades para resolver esse quebra-cabeça, considerando que o espaço de estados é tão simples?
-
-Como cada nó pode ser expandido até 5 vezes, fica difícil manter todos os estados memória, porém se o jogador compreender que deve primeiro mover os canibais e depois ir movendo em conjunto os missionários, fica fácil de decifrar o problema, mesmo que não tenha calculado/memorizado todos os estados possíveis.
